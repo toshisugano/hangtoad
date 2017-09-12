@@ -8,17 +8,17 @@ export const secret = [
 export const num = 0;
 
 export const number = (()=>{
-	return Math.floor(Math.random()*5);
+	return Math.floor(Math.random()*5) || 0; 
 })(); 
 
 export function wordMain() { 
-	
-	return secret[number || num].word;
+	let num = number || 0;
+	return secret[num].word;
 }
 
 export function wordHint() {
-	 
-	return secret[number || num].hint;
+	let num = number || 0;
+	return secret[num].hint;
 }
 
  
